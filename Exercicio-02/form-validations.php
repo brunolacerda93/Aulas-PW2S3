@@ -97,7 +97,7 @@ function forma_valido(): string {
   return "Campo Forma preenchido com sucesso!";
 }
 
-function validation_message($mensagem, $flag): void {
+function validation_message(string $mensagem, bool $flag): void {
   if ($flag) {
     echo "
             <div class=\"container sucess\">

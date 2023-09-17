@@ -88,12 +88,12 @@
 
       $success = "sucesso";
 
-      validation_message($nome, str_contains($nome, $success));
-      validation_message($idade, str_contains($idade, $success));
-      validation_message($email, str_contains($email, $success));
+      validation_message($nome,   str_contains($nome,   $success));
+      validation_message($idade,  str_contains($idade,  $success));
+      validation_message($email,  str_contains($email,  $success));
       validation_message($estado, str_contains($estado, $success));
       validation_message($comida, str_contains($comida, $success));
-      validation_message($forma, str_contains($forma, $success));
+      validation_message($forma,  str_contains($forma,  $success));
     }
 
   ?>
