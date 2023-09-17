@@ -74,29 +74,29 @@
 
   <button>Finalizar pedido</button>
 </form>
-  <?php
+<?php
 
-    include_once "form-validations.php";
+  include_once "form-validations.php";
 
-    if ($_POST) {
-      $nome   = nome_valido();
-      $idade  = idade_valido();
-      $email  = email_valido();
-      $estado = estado_valido();
-      $comida = comida_valido();
-      $forma  = forma_valido();
+  if ($_POST) {
+    $nome   = nome_valido();
+    $idade  = idade_valido();
+    $email  = email_valido();
+    $estado = estado_valido();
+    $comida = comida_valido();
+    $forma  = forma_valido();
 
-      $success = "sucesso";
+    $success = "sucesso";
 
-      validation_message($nome,   str_contains($nome,   $success));
-      validation_message($idade,  str_contains($idade,  $success));
-      validation_message($email,  str_contains($email,  $success));
-      validation_message($estado, str_contains($estado, $success));
-      validation_message($comida, str_contains($comida, $success));
-      validation_message($forma,  str_contains($forma,  $success));
-    }
+    validation_message($nome,   str_contains($nome,   $success));
+    validation_message($idade,  str_contains($idade,  $success));
+    validation_message($email,  str_contains($email,  $success));
+    validation_message($estado, str_contains($estado, $success));
+    validation_message($comida, str_contains($comida, $success));
+    validation_message($forma,  str_contains($forma,  $success));
+  }
 
-  ?>
+?>
 
 </body>
 </html>
