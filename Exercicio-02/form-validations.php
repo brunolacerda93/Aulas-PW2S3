@@ -43,7 +43,7 @@ function email_valido(): string {
   $email = trim($_POST["email"]);
 
   if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo "E-mail Inválido...";
+    return "E-mail Inválido...";
   }
 
   return "E-mail preenchido com sucesso!";
