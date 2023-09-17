@@ -11,7 +11,12 @@
 <h1>Exercício 02</h1>
 <?php
   include_once "form-validations.php";
-  
+  $nome   = nome_valido();
+  $idade  = idade_valido();
+  $email  = email_valido();
+  $estado = estado_valido();
+  $comida = comida_valido();
+  $forma  = forma_valido();
 ?>
 </body>
 </html>
