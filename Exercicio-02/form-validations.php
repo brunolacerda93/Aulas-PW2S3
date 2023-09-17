@@ -70,11 +70,13 @@ function comida_valido(): string {
 
   $comida = $_POST["comida"];
 
-  if (count($comida) == 3) {
-    for ($i = 0; $i < 3; $i++) {
-      if ($comida[$i] < 0 or $comida[$i] > 5) {
-        return "Inválido...";
-      }
+  if (count($comida) != 3) {
+    return "Inválido...";
+  }
+
+  for ($i = 0; $i < 3; $i++) {
+    if ($comida[$i] < 0 or $comida[$i] > 5) {
+      return "Inválido...";
     }
   }
 
