@@ -9,7 +9,7 @@ function exists(string $name): bool {
 
 function nome_valido(): string {
   if (!exists("nome")) {
-    return "Nome vazio!!!";
+    return "Campo Nome vazio";
   }
 
   $nome = trim($_POST["nome"]);
@@ -18,12 +18,12 @@ function nome_valido(): string {
     return "Nome Inválido...";
   }
 
-  return "Nome preenchido com sucesso!";
+  return "Campo Nome preenchido com sucesso!";
 }
 
 function idade_valido(): string {
   if (!exists("idade")) {
-    return "Idade vazia!!!";
+    return "Campo Idade vazio";
   }
 
   $idade = $_POST["idade"];
@@ -32,12 +32,12 @@ function idade_valido(): string {
     return "Idade Inválida...";
   }
 
-  return "Idade preenchida com sucesso!";
+  return "Campo Idade preenchido com sucesso!";
 }
 
 function email_valido(): string {
   if (!exists("email")) {
-    return "E-mail vazio";
+    return "Campo E-mail vazio";
   }
 
   $email = trim($_POST["email"]);
@@ -46,55 +46,55 @@ function email_valido(): string {
     return "E-mail Inválido...";
   }
 
-  return "E-mail preenchido com sucesso!";
+  return "Campo E-mail preenchido com sucesso!";
 }
 
 function estado_valido(): string {
   if (!exists("estado")) {
-    return "Estado Civil vazio";
+    return "Campo Estado Civil vazio";
   }
 
   $estado_civil = $_POST["estado"];
 
-  if ($estado_civil < 0 or $estado_civil > 2) {
-    return "Inválido...";
+  if ($estado_civil < 0 or $estado_civil > 3) {
+    return "Estado Civil Inválido...";
   }
 
-  return "Estado Civil preenchido com sucesso!";
+  return "Campo Estado Civil preenchido com sucesso!";
 }
 
 function comida_valido(): string {
   if (!exists("comida")) {
-    return "Comida vazio";
+    return "Campo Comida vazio";
   }
 
   $comida = $_POST["comida"];
 
   if (count($comida) != 3) {
-    return "Inválido...";
+    return "É preciso selecionar 3 (três) itens!!!";
   }
 
   for ($i = 0; $i < 3; $i++) {
     if ($comida[$i] < 0 or $comida[$i] > 5) {
-      return "Inválido...";
+      return "Comida Selecionada Inválida...";
     }
   }
 
-  return "Comida preenchido com sucesso!";
+  return "Campo Comida preenchido com sucesso!";
 }
 
 function forma_valido(): string {
   if (!exists("forma")) {
-    return "Forma vazio";
+    return "Campo Forma vazio";
   }
 
   $forma = $_POST["forma"];
 
-  if ($forma != 0 and $forma != 1) {
-    return "Forma Inválido...";
+  if ($forma != 1 and $forma != 2) {
+    return "Forma Inválida...";
   }
 
-  return "Forma preenchido com sucesso!";
+  return "Campo Forma preenchido com sucesso!";
 }
 
 function validation_message($mensagem, $flag): void {
@@ -102,7 +102,7 @@ function validation_message($mensagem, $flag): void {
     echo "
             <div class=\"container sucess\">
                 <p class=\"title\">Sucesso!</p>
-                <p class=\"descricao\">" . $mensagem . "</p>
+                <p class=\"descricao\">$mensagem</p>
             </div>";
   }
   else {

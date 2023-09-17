@@ -36,11 +36,11 @@
   <input type="text" placeholder="Digite seu e-mail" name="email">
 
   <label>Estado civil</label>
-  <select name="estadoCivil">
+  <select name="estado">
       <option value="">---</option>
-      <option value="0">Solteiro</option>
-      <option value="1">Casado</option>
-      <option value="2">Viúvo</option>
+      <option value="1">Solteiro</option>
+      <option value="2">Casado</option>
+      <option value="3">Viúvo</option>
   </select>
 
 
@@ -66,10 +66,10 @@
 
   <label>Forma</label>
       <label>
-          <input type="radio" name="forma" value="0">Entrega
+          <input type="radio" name="forma" value="1">Entrega
       </label>
       <label>
-          <input type="radio" name="forma" value="1">Buscar
+          <input type="radio" name="forma" value="2">Buscar
       </label>
 
   <button>Finalizar pedido</button>
